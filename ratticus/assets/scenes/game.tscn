@@ -30,10 +30,15 @@ scale = Vector2(10, 10)
 script = null
 
 [node name="background" parent="game_manager" instance=ExtResource("5_j62u1")]
-position = Vector2(2489, -104)
+position = Vector2(2456, -112)
 script = ExtResource("6_5aext")
 
-[node name="teleport" type="Node2D" parent="game_manager/background"]
-position = Vector2(-832.3, 292.777)
+[node name="teleport" type="Node2D" parent="game_manager"]
+position = Vector2(1656.7, 188.777)
+scale = Vector2(1, 1)
+
+[node name="camera2" type="Camera2D" parent="game_manager"]
+position = Vector2(2458, -89)
+zoom = Vector2(0.6, 0.6)
 
 [connection signal="draw" from="game_manager/background" to="game_manager" method="_on_background_draw"]
