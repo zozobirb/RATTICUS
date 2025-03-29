@@ -26,6 +26,6 @@ script = ExtResource("1_rwm0n")
 position = Vector2(-441, -10.5)
 shape = SubResource("RectangleShape2D_s027a")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="rat" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_14505")
 autoplay = "default"

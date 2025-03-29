@@ -23,6 +23,12 @@ func _handle_walk(delta: float):
 	
 	global_position.y += walkspeed * delta * y_input * locked
 	global_position.x += walkspeed * delta * x_input * locked
+	if(abs(walkspeed * delta * y_input * locked) == walkspeed * delta * y_input * locked) :
+		$rat.flip_h = false
+	else:
+		$rat.flip_h = true
+		
+	
 	pass
 
 func _level_up():
