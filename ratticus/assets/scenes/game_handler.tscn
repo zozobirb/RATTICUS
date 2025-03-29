@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bognvdg17tfd5"]
+
+[node name="gameHandler" type="Node2D"]
