@@ -13,7 +13,8 @@ extends CharacterBody2D
 @onready var weights:= PackedFloat32Array([1, 0.25, 0.5])
 @onready var Actions: Array
 @onready var XpRewards: int
-
+@onready var gM: int
+@onready var playerHp: int
 
 func _ready() -> void: 
 	defenseE = 4
@@ -22,6 +23,8 @@ func _ready() -> void:
 	XpRewards = 45 
 	attackType = getAttack(AttackList)
 	attackEDmg = getAttackDmg(attackType, levelE)
+	
+	
 
 func getAttack(AttackList: Array) -> String:
 	var rand: int
@@ -52,12 +55,37 @@ func getAttackDmg(attackType: String, lvlE: int) -> int:
 	print(dmg,"\n")
 	return dmg
 	
-
-func getdefenseE(defense: int) -> int:
-	return defense
+#will use the below functions to get the damge dealt to the enemy by the player
+func getDefenseE() -> int:
+	return defenseE
 	
-func getHp(Hp: int) -> int:
-	return Hp
+func getHp() -> int:
+	return HpE
+
+
+func enemyLose() -> int:
+	print("Enemy has lost, player rewarded ",XpRewards)
+	return XpRewards
+func enemyWins() -> void:
+	print("YOU'VE LOST RATTICUS, -AHAHA")
+	pass
+
+###here is where the magic begins!!!check for battle manager
+
+	###onAttack
+func _onAttack(onAtt: int) -> void:
+	var currAttack: String = getAttack(AttackList)
+	var damage: int = getAttackDmg(currAttack, levelE)
+	print("Enemy attacks with: ",currAttack,"\nDamage dealt to player is: ", damage)
+		#ensure to pass the damage the enemy does this player AND UPDATE THE PlAYER's HP
+	
+func _onIdle(damagePlayer: int) -> void:
+	HpE = HpE-damagePlayer
+	
+	
+		
+		
+	
 
 
 	
