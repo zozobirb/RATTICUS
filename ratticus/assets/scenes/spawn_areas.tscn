@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c77wgkiwweaqi" path="res://assets/sprites/seamless-green-grass-pattern_1284-52275.jpg" id="2_p5mfn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t2g4m"]
+size = Vector2(383, 731)
 
 [sub_resource type="GDScript" id="GDScript_e1van"]
 script/source = "extends CollisionShape2D
@@ -14,8 +15,12 @@ var _player = null
 script = ExtResource("1_p5mfn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-181.5, -41.5)
 shape = SubResource("RectangleShape2D_t2g4m")
 script = SubResource("GDScript_e1van")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-6, -41)
 texture = ExtResource("2_p5mfn")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
