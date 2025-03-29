@@ -1,20 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxv0di27ys5ix"]
+[gd_scene load_steps=2 format=3 uid="uid://bxv0di27ys5ix"]
 
 [ext_resource type="Texture2D" uid="uid://bos2wf7l45lcc" path="res://assets/sprites/sewer bg.jpg" id="1_wfag3"]
 
-[sub_resource type="GDScript" id="GDScript_wi2cc"]
-script/source = "extends Sprite2D
-
-func reveal():
-	show()
-"
-
-[node name="background" type="Node2D"]
-visible = false
-
-[node name="background" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-9.50005, 15)
-scale = Vector2(0.632813, 0.668566)
+[node name="background" type="Sprite2D"]
+position = Vector2(-17, 1318)
 texture = ExtResource("1_wfag3")
-script = SubResource("GDScript_wi2cc")
