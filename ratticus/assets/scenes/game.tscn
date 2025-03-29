@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://4jqnc7mc84dg"]
+[gd_scene load_steps=3 format=3 uid="uid://4jqnc7mc84dg"]
 
 [ext_resource type="PackedScene" uid="uid://dxwghgmtynmm" path="res://assets/scenes/player.tscn" id="1_cb66b"]
+[ext_resource type="PackedScene" uid="uid://bognvdg17tfd5" path="res://assets/scenes/game_handler.tscn" id="1_dis88"]
 
 [node name="game" type="Node2D"]
+
+[node name="gameHandler" parent="." instance=ExtResource("1_dis88")]
 
 [node name="Player" parent="." instance=ExtResource("1_cb66b")]
 scale = Vector2(0.1, 0.1)
