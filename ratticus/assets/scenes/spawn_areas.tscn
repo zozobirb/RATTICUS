@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://b08yt1e16enhw"]
+[gd_scene load_steps=4 format=3 uid="uid://b08yt1e16enhw"]
+
+[ext_resource type="Script" uid="uid://xxwaylprvudl" path="res://assets/scripts/spawn_areas.gd" id="1_p5mfn"]
+[ext_resource type="Script" uid="uid://dlyfyixrrk7b8" path="res://assets/scenes/collision_shape_2d.gd" id="2_h8g4y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t2g4m"]
 
 [node name="spawnAreas" type="Area2D"]
+script = ExtResource("1_p5mfn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_t2g4m")
+script = ExtResource("2_h8g4y")

@@ -3,7 +3,7 @@ class_name Player
 
 var walkspeed := 500
 var escapeChance := .50
-var encounterChance := .1
+var encounterChance := 10
 var attack := 1
 var defense := 1
 var level := 1
