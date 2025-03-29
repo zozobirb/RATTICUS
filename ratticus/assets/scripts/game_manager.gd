@@ -1,5 +1,7 @@
 extends Node2D
 class_name game_manager
 
-func _ready() -> void:
-	var battle = load("res://assets/scripts/battle_manager.gd").new()
+func battle_time():
+	print("MOM I DONT WANNA GO TO WAR :(")
+
+	Player.locked = 0

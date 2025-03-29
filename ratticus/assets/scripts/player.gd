@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
+var locked := 1
 var walkspeed := 500
 var escapeChance := .50
 var encounterChance := 10
@@ -20,8 +21,8 @@ func _handle_walk(delta: float):
 	var y_input := Input.get_axis("ui_up", "ui_down")
 
 	
-	global_position.y += walkspeed * delta * y_input
-	global_position.x += walkspeed * delta * x_input
+	global_position.y += walkspeed * delta * y_input * locked
+	global_position.x += walkspeed * delta * x_input * locked
 	pass
 
 func _level_up():
@@ -32,3 +33,6 @@ func _level_up():
 		hp = round(hp * 1.8)
 		defense = round(defense * 1.7)
 		attack = round(attack * 1.5)
+
+func lock(num : int):
+	locked = 1
