@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://4jqnc7mc84dg"]
+[gd_scene load_steps=6 format=3 uid="uid://4jqnc7mc84dg"]
 
 [ext_resource type="PackedScene" uid="uid://vj28y0iq5d6t" path="res://assets/scenes/game_manager.tscn" id="1_5gf0t"]
 [ext_resource type="PackedScene" uid="uid://dxwghgmtynmm" path="res://assets/scenes/player.tscn" id="1_cb66b"]
 [ext_resource type="PackedScene" uid="uid://b08yt1e16enhw" path="res://assets/scenes/spawn_areas.tscn" id="3_5gf0t"]
+[ext_resource type="PackedScene" path="res://assets/scenes/enemy.tscn" id="4_cb5na"]
+[ext_resource type="Texture2D" uid="uid://bos2wf7l45lcc" path="res://assets/sprites/sewer bg.jpg" id="5_j62u1"]
 
 [node name="game" type="Node2D"]
 
@@ -19,3 +21,10 @@ position_smoothing_enabled = true
 show_behind_parent = true
 light_mask = 2
 position = Vector2(571, 48)
+
+[node name="Enemy" parent="game_manager" instance=ExtResource("4_cb5na")]
+
+[node name="background" type="Sprite2D" parent="game_manager"]
+position = Vector2(-9.50005, 15)
+scale = Vector2(0.632813, 0.668566)
+texture = ExtResource("5_j62u1")
