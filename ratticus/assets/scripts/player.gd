@@ -1,24 +1,34 @@
 extends CharacterBody2D
 class_name Player
 
-var walkspeed := 300
+var walkspeed := 500
 var escapeChance := .50
 var encounterChance := .1
-var attack 
-var defense
+var attack := 1
+var defense := 1
 var level := 1
-var hp
+var hp := 10
+var XP := 0
 
 func _process(delta: float) -> void:
 	_handle_walk(delta)
 	move_and_slide()
-	
-	
+
+
 func _handle_walk(delta: float):
 	var x_input := Input.get_axis("ui_left", "ui_right")
 	var y_input := Input.get_axis("ui_up", "ui_down")
 
 	
-	velocity.y += walkspeed * delta * y_input
-	velocity.x += walkspeed * delta * x_input
+	global_position.y += walkspeed * delta * y_input
+	global_position.x += walkspeed * delta * x_input
 	pass
+
+func _level_up():
+	if(XP >= round(100 * (1+ level/2 ))):
+		XP -= round(100 * (1+ level/2 ))
+		
+		level += 1
+		hp = round(hp * 1.8)
+		defense = round(defense * 1.7)
+		attack = round(attack * 1.5)

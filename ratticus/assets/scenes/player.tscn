@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxwghgmtynmm"]
+[gd_scene load_steps=5 format=3 uid="uid://dxwghgmtynmm"]
 
 [ext_resource type="Script" uid="uid://cmu72shv0pwln" path="res://assets/scripts/player.gd" id="1_rwm0n"]
 [ext_resource type="Texture2D" uid="uid://xcjmjnwqribd" path="res://assets/sprites/pngimg.com - rat_mouse_PNG23553.png" id="2_s027a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s027a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_14505"]
 animations = [{
@@ -18,6 +20,7 @@ animations = [{
 script = ExtResource("1_rwm0n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_s027a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_14505")

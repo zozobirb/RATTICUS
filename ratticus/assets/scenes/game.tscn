@@ -5,3 +5,7 @@
 [node name="game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_cb66b")]
+scale = Vector2(0.1, 0.1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
