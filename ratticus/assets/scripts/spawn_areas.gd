@@ -15,5 +15,5 @@ func _on_body_entered():
 func _roll_chance():
 	var probability : int = _player.encounterChance 
 	if (randi() % probability) == (probability - 1): 
-		battle_manager.battle_time()
+		gameManager.battle_time()
 		pass

@@ -1,5 +1,5 @@
 extends Node2D
-class_name battleTime
+class_name battle_manager
 
 func battle_time():
 	
