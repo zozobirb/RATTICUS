@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
+var AttackList: Array = ["Tail Turbine", "Claw Scratch", "Rat Dunk"]
 var locked := 1
 var walkspeed := 500
 var escapeChance := .50
@@ -10,6 +11,7 @@ var defense := 1
 var level := 1
 var hp := 10
 var XP := 0
+var chosen_atk : int
 
 func _process(delta: float) -> void:
 	_handle_walk(delta)

@@ -33,7 +33,6 @@ script = ExtResource("6_5aext")
 
 [node name="teleport" type="Node2D" parent="game_manager"]
 position = Vector2(1656.7, 188.777)
-scale = Vector2(1, 1)
 
 [node name="camera2" type="Camera2D" parent="game_manager"]
 position = Vector2(2458, -89)

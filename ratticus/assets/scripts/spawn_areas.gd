@@ -17,7 +17,7 @@ func _roll_chance():
 		print("i solo this ez")
 		$"../Player".global_position = $"../teleport".global_position
 		swap_cam()
-		gameManager.battle_time()
+		$"../battle_manager".battle_time()
 		pass
 
 func swap_cam():
