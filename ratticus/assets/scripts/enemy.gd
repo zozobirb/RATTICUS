@@ -4,15 +4,15 @@ class_name Enemy
 extends CharacterBody2D
 
 
-@onready var attackType: String
-@onready var attackEDmg: int
-@onready var defenseE: int
-@onready var levelE: int
-@onready var HpE: int
-@onready var AttackList: Array = ["Antena Whip", "Wing Smash", "4 punch"]
-@onready var weights:= PackedFloat32Array([1, 0.25, 0.5])
-@onready var Actions: Array
-@onready var XpRewards: int
+var attackType: String
+var attackEDmg: int
+var defenseE: int
+var levelE: int
+var HpE: int
+var AttackList: Array = ["Antena Whip", "Wing Smash", "4 punch"]
+var weights:= PackedFloat32Array([1, 0.25, 0.5])
+var Actions: Array
+var XpRewards: int
 
 
 func _ready() -> void: 
@@ -59,7 +59,8 @@ func getdefenseE(defense: int) -> int:
 func getHp(Hp: int) -> int:
 	return Hp
 
+func getWeights() -> PackedFloat32Array:
+	return weights
 
-	
-
-	
+func getAtks() -> Array:
+		return AttackList

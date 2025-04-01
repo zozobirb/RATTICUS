@@ -25,9 +25,9 @@ func _handle_walk(delta: float):
 	
 	global_position.y += walkspeed * delta * y_input * locked
 	global_position.x += walkspeed * delta * x_input * locked
-	if(abs(walkspeed * delta * x_input * locked) != walkspeed * delta * x_input * locked) :
+	if(Input.is_key_pressed(KEY_LEFT)) :
 		$rat.flip_h = false
-	else:
+	if(Input.is_key_pressed(KEY_RIGHT)):
 		$rat.flip_h = true
 		
 	
