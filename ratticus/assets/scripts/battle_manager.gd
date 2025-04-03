@@ -6,7 +6,9 @@ var TurnsPassed := 1
 func battle_time():
 	
 	print("in the script, straight up printing it")
+
 	
+
 	if(turn == 0):
 		var tempPlayer = Player.new()
 		

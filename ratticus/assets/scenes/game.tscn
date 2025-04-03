@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://4jqnc7mc84dg"]
+[gd_scene load_steps=9 format=3 uid="uid://4jqnc7mc84dg"]
 
 [ext_resource type="PackedScene" uid="uid://vj28y0iq5d6t" path="res://assets/scenes/game_manager.tscn" id="1_5gf0t"]
 [ext_resource type="PackedScene" uid="uid://dxwghgmtynmm" path="res://assets/scenes/player.tscn" id="1_cb66b"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://pa1o1k5svxr4" path="res://assets/scenes/enemy.tscn" id="4_cb5na"]
 [ext_resource type="PackedScene" uid="uid://bxv0di27ys5ix" path="res://assets/scenes/background.tscn" id="5_j62u1"]
 [ext_resource type="Script" uid="uid://vbcfq1y3rto4" path="res://assets/scripts/background.gd" id="6_5aext"]
+[ext_resource type="Script" uid="uid://dfo5ax63wlb51" path="res://assets/scripts/attacks.gd" id="7_3w2km"]
+[ext_resource type="Script" uid="uid://ket4jwapm5xk" path="res://assets/scripts/battle_manager.gd" id="8_wfsp4"]
 
 [node name="game" type="Node2D"]
 
@@ -37,5 +39,11 @@ position = Vector2(1656.7, 188.777)
 [node name="camera2" type="Camera2D" parent="game_manager"]
 position = Vector2(2458, -89)
 zoom = Vector2(0.6, 0.6)
+
+[node name="battle_manager" type="Node2D" parent="game_manager"]
+script = ExtResource("8_wfsp4")
+
+[node name="ListOfAtks" type="Node2D" parent="game_manager"]
+script = ExtResource("7_3w2km")
 
 [connection signal="draw" from="game_manager/background" to="game_manager" method="_on_background_draw"]
