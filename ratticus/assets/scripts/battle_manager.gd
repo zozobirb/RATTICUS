@@ -12,7 +12,7 @@ func battle_time():
 	if(turn == 0):
 		var tempPlayer = Player.new()
 		
-		tempPlayer.chosen_atk
+		
 		
 		pass
 
