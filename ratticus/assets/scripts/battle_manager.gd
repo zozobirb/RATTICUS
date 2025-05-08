@@ -13,7 +13,7 @@ func battle_time():
 		var tempPlayer = Player.new()
 		
 		tempPlayer.chosen_atk
-		tempPlayer.attackDamage()
+		
 		pass
 
 

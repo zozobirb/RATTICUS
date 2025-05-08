@@ -1,7 +1,6 @@
 extends CharacterBody2D
 class_name Player
 
-var AttackList = [$"../ListOfAtks".get_atk(0), $"../ListOfAtks".get_atk(2), $"../ListOfAtks".get_atk(4)]
 var locked := 1
 var walkspeed := 500
 var escapeChance := .50
@@ -15,7 +14,6 @@ var chosen_atk : int
 
 func _process(delta: float) -> void:
 	_handle_walk(delta)
-	print(AttackList)
 	move_and_slide()
 
 
